@@ -1,0 +1,25 @@
+{
+  "name": "@ds-wizard/importer-sdk",
+  "version": "0.1.0",
+  "description": "An SDK for building importers for the Data Stewardship Wizard",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch --progress",
+    "serve": "webpack serve"
+  },
+  "author": "Jan Slifka",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack": "^5.62.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  },
+  "files": ["lib/*"]
+}
