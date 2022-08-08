@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
         output: {
             path: path.join(__dirname, '/lib'),
             filename: '[name].js',
-            library: 'DSWIntegrationWidget',
+            library: 'DSWImporter',
             libraryExport: 'default',
             libraryTarget: 'umd',
             globalObject: 'this',
