@@ -44,6 +44,7 @@ export default class DSWImporter {
             type: 'Import',
             events: this._events
         }, this._origin)
+        window.close()
     }
 
     static createUUID() {
