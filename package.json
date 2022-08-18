@@ -4,7 +4,7 @@
   "description": "An SDK for building importers for the Data Stewardship Wizard",
   "main": "lib/index.js",
   "directories": {
-    "example": "examples"
+    "example": "example"
   },
   "scripts": {
     "build": "webpack",

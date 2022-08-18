@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/lib/index.js"></script>
+    <style>
+        button {
+            padding: .5rem 1rem;
+            background: blueviolet;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+    <title>Importer Example</title>
+</head>
+
+<body>
+    <button id="import">Import</button>
+    <script>
+        const importer = new DSWImporter()
+        importer.init()
+            .then(() => {
+                const importButton = document.getElementById('import')
+                importButton.addEventListener('click', () => {
+                    const chapterUuid = '1e85da40-bbfc-4180-903e-6c569ed2da38'
+                    const contributorListUuid = '73d686bd-7939-412e-8631-502ee6d9ea7b'
+                    
+                    // Add an empty item
+                    importer.addItem([chapterUuid, contributorListUuid])
+
+                    // Add another item but now fill in the contributor's name within the item
+                    const contributorUuid = importer.addItem([chapterUuid, contributorListUuid])
+                    const contributorNameUuid = '6155ad47-3d1e-4488-9f2a-742de1e56580'
+                    importer.setReply([chapterUuid, contributorListUuid, contributorUuid, contributorNameUuid], 'Lee Harris')
+
+                    // Send the replies
+                    importer.send()
+                })
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    </script>
+</body>
+
+</html>
