@@ -29,6 +29,15 @@ export default class DSWImporter {
         })
     }
 
+    setIntegrationReply(path, value, id) {
+        this._events.push({
+            type: 'ReplyIntegration',
+            path: path.join('.'),
+            value: value,
+            id: id
+        })
+    }
+
     addItem(path) {
         const uuid = DSWImporter.createUUID()
         this._events.push({

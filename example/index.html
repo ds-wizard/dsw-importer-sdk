@@ -35,7 +35,18 @@
                     // Add another item but now fill in the contributor's name within the item
                     const contributorUuid = importer.addItem([chapterUuid, contributorListUuid])
                     const contributorNameUuid = '6155ad47-3d1e-4488-9f2a-742de1e56580'
-                    importer.setReply([chapterUuid, contributorListUuid, contributorUuid, contributorNameUuid], 'Lee Harris')
+                    importer.setReply(
+                        [chapterUuid, contributorListUuid, contributorUuid, contributorNameUuid],
+                        'Lee Harris'
+                    )
+
+                    const contributorAffiliationUuid = '68530470-1f1c-4448-8593-63a288713a66'
+                    importer.setIntegrationReply(
+                        [chapterUuid, contributorListUuid, contributorUuid, contributorAffiliationUuid],
+                        '**Czech Technical University** in Prague',
+                        'https://ror.org/03kqpb082'
+                    )
+
 
                     // Send the replies
                     importer.send()
