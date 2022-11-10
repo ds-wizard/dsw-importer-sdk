@@ -7,22 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/lib/index.js"></script>
     <style>
-        button {
-            padding: .5rem 1rem;
-            background: blueviolet;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
+        .wrapper {
+            padding: 2rem;
+            margin: 2rem;
+            border: .25rem dashed var(--bs-primary);
+            border-radius: var(--bs-border-radius);
         }
     </style>
     <title>Importer Example</title>
 </head>
 
 <body>
-    <button id="import">Import</button>
+    <div class="wrapper text-center">
+        <button id="import" class="btn btn-primary">Import</button>
+    </div>
     <script>
         const importer = new DSWImporter()
-        importer.init()
+        importer
+            .init()
             .then(() => {
                 const importButton = document.getElementById('import')
                 importButton.addEventListener('click', () => {
@@ -40,10 +42,11 @@
                         'Lee Harris'
                     )
 
+                    // Fill in an integration question for the contributor's affiliation
                     const contributorAffiliationUuid = '68530470-1f1c-4448-8593-63a288713a66'
                     importer.setIntegrationReply(
                         [chapterUuid, contributorListUuid, contributorUuid, contributorAffiliationUuid],
-                        '**Czech Technical University** in Prague',
+                        'Czech Technical University in Prague',
                         'https://ror.org/03kqpb082'
                     )
 
