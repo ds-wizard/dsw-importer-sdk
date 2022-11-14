@@ -105,6 +105,12 @@ body {
 
 This way, you can create reusable importers across different DSW instances while keeping the look and feel of those instances.
 
+## Compatibility
+
+| Importer SDK Version | DSW Version from | DSW Version to |
+| --- | --- | --- |
+| `0.2.0` | `3.18` | `latest` |
+| `0.1.0` | `3.15` | `3.17` |
 
 ## License
 
