@@ -73,6 +73,21 @@ importer.init()
     })
 ```
 
+### UUIDs by Annotations
+
+Instead of hardcoding the UUID of a specific entity (chapter, question,...) you can find it using the annotations defined in the knowledge model. For example, if you have a question with the following annotation:
+
+```
+Key:   rdfType
+Value: http://purl.org/dc/terms/title
+```
+
+You can find its UUID using the importer API:
+
+```javascript
+const questionUuid = importer.getQuestionUuidByAnnotation('rdfType', 'http://purl.org/dc/terms/title')
+```
+
 ### Importer Options
 
 You can pass some extra importer options to the init function. If you don't, the default options will be used.
