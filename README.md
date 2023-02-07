@@ -124,7 +124,8 @@ This way, you can create reusable importers across different DSW instances while
 
 | Importer SDK Version | DSW Version from | DSW Version to |
 | --- | --- | --- |
-| `0.2.0` | `3.18` | `latest` |
+| `0.3.0` | `3.20` | `latest` |
+| `0.2.0` | `3.18` | `3.19` |
 | `0.1.0` | `3.15` | `3.17` |
 
 ## License
