@@ -1,3 +1,6 @@
+> [!CAUTION]
+> As of DSW 4.1, DSW Importer SDK is no longer supported. Use [DSW Integration SDK](https://github.com/ds-wizard/dsw-integration-sdk) instead.
+
 # DSW Importer SDK
 
 [![npm version](https://badge.fury.io/js/@ds-wizard%2Fimporter-sdk.svg)](https://badge.fury.io/js/@ds-wizard%2Fimporter-sdk)
